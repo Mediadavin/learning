@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pendaftaran E-Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #288cdd;
+      font-family: Arial, sans-serif;
+    }
+
+    #form-container {
+      width: 90%;
+      margin: 0 auto;
+      background-color: #f1f1f7;
+      border: 2px solid #da0808;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    #form-container h2 {
+      text-align: center;
+      color: #1E90FF;
+    }
+
+    #form-container input[type="text"],
+    #form-container input[type="date"],
+    #form-container input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #f1d0d0;
+      border-radius: 5px;
+      box-sizing: border-box; /* Memastikan padding dan border termasuk dalam lebar */
+    }
+
+    #form-container input[type="submit"] {
+      width: 100%;
+      background-color: #1E90FF;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #form-container input[type="submit"]:hover {
+      background-color: #004B8D;
+    }
+
+    #footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 12px;
+      color: #f7f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <audio autoplay>
+    <source src="/lagu1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="form-container">
+    <h2>Login E-Learning</h2>
+    <form id="registration-form" action="(Link Spreadsheet)" method="post">
+      <label for="nama">Nomor Regristasi</label>
+      <input type="text" id="nama" name="nama" required>
+      <label for="ktp">Passwoard (6) digit</label>
+      <input type="text" id="ktp" name="ktp" required>
+      <input type="submit" value="Simpan Data">
+    </form>
+  </div>
+
+  <div id="footer">
+    Copyright @ 2024 WebDavin, All rights reserved.
+  </div>
+
+  <script>
+    document.getElementById("registration-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get input values
+      var nama = document.getElementById("nama").value;
+      var ktp = document.getElementById("ktp").value;
+
+      // Check if input values match the criteria
+      if (nama === "0908701213" && ktp === "Lvmi04") {
+        // Redirect to the provided link
+        window.location.href = "https://ec3a5748-e98c-42a6-8da2-eec4a67b4361-00-1dy0dm1uteh0b.sisko.replit.dev/"; // Change "https://example.com" to the link you provided
+      } else {
+        alert("Nama atau kata sandi tidak sesuai."); // Show an alert if input values don't match
+      }
+    });
+  </script>
+</body>
+
+</html>
